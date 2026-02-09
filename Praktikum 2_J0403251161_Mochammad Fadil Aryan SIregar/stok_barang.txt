@@ -1,0 +1,6 @@
+BRG001,Keychain,30
+BRG002,Totebag,25
+BRG003,Komik,25
+BRG004,Pensil,40
+BRG005,Stiker,35
+jg007,roti,12
