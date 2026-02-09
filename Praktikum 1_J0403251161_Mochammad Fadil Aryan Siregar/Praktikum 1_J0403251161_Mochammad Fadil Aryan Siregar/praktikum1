@@ -1,0 +1,51 @@
+# ========================================v======
+# Praktikum 1  :   ADT dan File Handling
+# ===============================================
+
+print("===Membuka file dalam satu string===")
+with open("Data_mahasiswa.txt","r",encoding="utf-8") as file:
+    isi_file = file.read()
+print(isi_file)
+
+print("===Hasil read===")
+print("Tipe data :", type(isi_file))
+
+#Membuka file per baris
+print("====Membuka file per baris====")
+jumlah_baris = 0
+with open("Data_mahasiswa.txt","r",encoding="utf-8") as file:
+    for baris in file:
+        jumlah_baris += 1
+        baris = baris
+        print(f"Baris Ke-{jumlah_baris}")
+        print(f"Isi data : {baris}")
+
+#parsing baris menjadi data satuan dan menampilkannya 
+with open("Data_mahasiswa.txt","r",encoding="utf-8") as file:
+    for baris in file:
+        baris = baris.strip()
+        nim, nama, nilai = baris.split(",")
+        print("NIM :", nim, "| Nama :", nama,"| Nilai :", nilai)
+
+Data_list = [] #untuk menampung data
+
+with open("Data_mahasiswa.txt","r",encoding="utf-8") as file:
+    for baris in file:
+        baris = baris.strip()
+        nim, nama, nilai = baris.split(",")
+        Data_list.append([nim, nama, int(nilai)])
+print("=== Menampilkan List ===")
+print(Data_list)
+
+#Menampilkan Dictionary
+print("Menampilkan data dictionary")
+data_Dict = {}
+with open("Data_mahasiswa.txt", "r", encoding="utf-8") as file:
+    for baris in file:
+        baris = baris.strip()
+        nim, nama, nilai = baris.split(",")
+        data_Dict[nim] = {
+            "nama" : nama,
+            "nilai" : int(nilai)
+        }
+print(data_Dict)
