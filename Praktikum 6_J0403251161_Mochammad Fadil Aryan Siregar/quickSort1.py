@@ -38,7 +38,8 @@ def partition(data,first,last):
     data[rightmark] = temp
     return rightmark
 
-#udah descending
+#ascending
 data = [54,26,93,17,77,31,44,55,20]
 quickSort(data)
+
 print(data)
