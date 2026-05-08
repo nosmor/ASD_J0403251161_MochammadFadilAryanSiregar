@@ -9,10 +9,9 @@
 # Praktikum 1 - membuat adjecency matrix
 # ==============================================
 
-print("\nPraktikum 2 Adjecency list\n"
+
+print("\nPraktikum 1 Adjecency Matriks\n"
       "=============================")
-
-
     # 1 Adjacency Matrix
 # Diketahui [(0, 1), (0, 2), (1, 2), (2, 3)]
 def createGraph(V, edges):
@@ -46,10 +45,9 @@ if __name__ =="__main__":
             print(mat[i][j], end=" ")
         print()
 
+          
 print("\nPraktikum 2 Adjecency list\n"
       "=============================")
-
-
     # 2 Adjacency List
 # diketahui [(A,B),(A,C),(B,D),(D,C)]
 def createGraphADJ(V, edges):
@@ -74,11 +72,10 @@ if __name__ == "__main__":
             print(n, end=" ")
         print()
 
-    # Praktikum 3 Konversi matriks ke list
+
 print("\nPraktikum 3 Mengkonversi matrix ke list\n"
       "=============================")
-
-
+    # Praktikum 3 Konversi matriks ke list
 # Diketahui matriks
 matrix = [
     [0, 1, 1, 0],
@@ -111,11 +108,10 @@ print("Adjacency List (Representasi Angka):")
 for i in range(len(conv)):
     print(f"{i}: {conv[i]}")
 
-    # Praktikum 4 studi kasus 
+
 print("\nPraktikum 4 Studi kasus\n"
       "=============================")
-
-
+    # Praktikum 4 studi kasus 
 # Fungsi untuk membangun Adjacency List
 def createGraphADJUnd(V, edges):
     # Membuat list kosong sebanyak V
@@ -142,18 +138,17 @@ def createGraphUnd(V, edges):
         mat[v][u] = 1
     return mat
 
-# --- MAIN PROGRAM ---
 if __name__ == "__main__":
-    # Halaman 10: Inisialisasi Data
+    # Inisialisasi Data
     user_names = ["Leon", "Fadil", "Vergil", "Dante", "Evanescia"]
     V5 = len(user_names)
     
     # Daftar hubungan (edges)
     friend = [(0,1), (0,2), (1,3), (2,3), (3,4)]
     
-    # Halaman 11: Membangun matriks
+    # Membangun matriks
     hasil = createGraphUnd(V5, friend)
-    print("Tampilan Adjecency Matrix")
+    print("# Tampilan Adjecency Matrix")
     for i in range(V5):
         for j in range(V5):
             print(hasil[i][j], end=" ")
@@ -161,7 +156,7 @@ if __name__ == "__main__":
 
 
     adj = createGraphADJUnd(V5, friend)
-    print("Tampilan Adjacency List")
+    print("\n# Tampilan Adjacency List")
     # Penampilan List yang menggunakan looping dictionary
     for i in range(V5):
         print(f"{user_names[i]}: ", end="")
